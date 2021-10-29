@@ -27,7 +27,7 @@ let pariDispari = prompt('Inserisci "pari" o "dispari"');
 
 console.log(pariDispari);
 
-let oneToFive = parseInt(prompt('inserisci un numero da 1 a 5'));
+let oneToFive = parseInt(prompt('inserisci un numero da 0 a 5'));
 
 console.log(oneToFive);
 
@@ -36,11 +36,9 @@ let numeroGeneratodalComputer = getNumCasuale();
 let numeriSommati = (oneToFive + numeroGeneratodalComputer);
 console.log("La somma dei numeri sommati è = " + numeriSommati); 
 
-let risposta = '';
+let esito = evenOrOdd(numeriSommati);
 
-let esito = evenOrOdd();
-
-if (risposta === pariDispari) {
+if (esito === pariDispari) {
    console.log('Hai vinto');
 } else {
    console.log('Hai perso');
@@ -54,11 +52,11 @@ function getNumCasuale() {
    return num;
 }
 
-function evenOrOdd(numeroSommato) {
+function evenOrOdd(parametriNumeriSommati) {
 
+   let risposta = '';
 
-   if (numeroSommato % 2 === 0) {
-
+   if (parametriNumeriSommati % 2 == 0) {
 
       risposta = 'pari';
       console.log('Il numero uscito è pari');
@@ -68,6 +66,8 @@ function evenOrOdd(numeroSommato) {
       risposta = 'dispari';
       console.log('Il numero uscito è dispari');
    }
+
+   return risposta;
 }
 
 
