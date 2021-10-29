@@ -31,24 +31,41 @@ let oneToFive = parseInt(prompt('inserisci un numero da 1 a 5'));
 
 console.log(oneToFive);
 
-numCasuale();
+let numeroGeneratodalComputer = getNumCasuale();
 
-let numeriSommati = (oneToFive + num);
+let numeriSommati = (oneToFive + numeroGeneratodalComputer);
 console.log("La somma dei numeri sommati è = " + numeriSommati); 
 
-evenOrOdd();
+let risposta = '';
 
-function numCasuale() {
+let esito = evenOrOdd();
 
-   num = Math.round(Math.random() * 5);
-   console.log("Numero casuale del pc = " + num); 
-
+if (risposta === pariDispari) {
+   console.log('Hai vinto');
+} else {
+   console.log('Hai perso');
 }
 
-function evenOrOdd() {
-   if (numeriSommati % 2 === 0) {
+function getNumCasuale() {
+
+   let num = Math.round(Math.random() * 5);
+   console.log("Numero casuale del pc = " + num); 
+
+   return num;
+}
+
+function evenOrOdd(numeroSommato) {
+
+
+   if (numeroSommato % 2 === 0) {
+
+
+      risposta = 'pari';
       console.log('Il numero uscito è pari');
-   } else if (numeriSommati & 2 !== 0) {
+
+   } else {
+
+      risposta = 'dispari';
       console.log('Il numero uscito è dispari');
    }
 }
