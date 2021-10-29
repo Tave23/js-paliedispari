@@ -33,8 +33,10 @@ console.log(oneToFive);
 
 numCasuale();
 
-sommaNumeri();
+let numeriSommati = (oneToFive + num);
+console.log("La somma dei numeri sommati è = " + numeriSommati); 
 
+evenOrOdd();
 
 function numCasuale() {
 
@@ -43,10 +45,13 @@ function numCasuale() {
 
 }
 
-function sommaNumeri() {
-
-   let numeriSommati = (oneToFive + num);
-   console.log("La somma dei numeri sommati è = " + numeriSommati); 
-
+function evenOrOdd() {
+   if (numeriSommati % 2 === 0) {
+      console.log('Il numero uscito è pari');
+   } else if (numeriSommati & 2 !== 0) {
+      console.log('Il numero uscito è dispari');
+   }
 }
+
+
 
