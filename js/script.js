@@ -5,7 +5,7 @@
 
 
 //prompt della parola richiesta dall'utente
-const str = prompt('inserisci una parola')
+const str = prompt('inserisci una parola per vedere se è palindroma o meno')
 let strReverse = str.split("").reverse().join("");
 
 if (str === strReverse) {
@@ -23,18 +23,30 @@ if (str === strReverse) {
 // Dichiariamo chi ha vinto.
 
 // prompt pari o dispari
-// const pariDispari = prompt('Inserisci pari o dispari'); 
-// const oneToFive = prompt('inserisci un numero da 1 a 5');
+let pariDispari = prompt('Inserisci "pari" o "dispari"'); 
 
-// console.log(pariDispari);
-// console.log(oneToFive);
+console.log(pariDispari);
 
-// casuale();
+let oneToFive = parseInt(prompt('inserisci un numero da 1 a 5'));
 
-// function casuale() {
+console.log(oneToFive);
 
-//    num = Math.round(Math.random() * 5);
-//    console.log("Numero casuale " + num); 
+numCasuale();
 
-// }
+sommaNumeri();
+
+
+function numCasuale() {
+
+   num = Math.round(Math.random() * 5);
+   console.log("Numero casuale del pc = " + num); 
+
+}
+
+function sommaNumeri() {
+
+   let numeriSommati = (oneToFive + num);
+   console.log("La somma dei numeri sommati è = " + numeriSommati); 
+
+}
 
