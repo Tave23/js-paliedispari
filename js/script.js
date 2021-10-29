@@ -5,24 +5,13 @@
 
 
 //prompt della parola richiesta dall'utente
-const word = prompt('Inserisci una parola'); 
+const str = prompt('inserisci una parola')
+let strReverse = str.split("").reverse().join("");
 
-let str = word.toLowerCase();
-
-checkPalindrome(str);
-
-function checkPalindrome(str) {
-  // trovo la lunghezza della stringa
-  const len = str.length;
- 
-  for (let i = 0; i < len / 2; i++) {
-
-    if (str[i] !== str[len - 1 - i]) {
-      console.log("La parola NON inserita è palindroma");
-    } else if (str[i] == str[len - 1 - i]) {
-      console.log("La parola inserita è palindroma");
-    }
-  }
+if (str === strReverse) {
+  console.log("Questa parola è palindroma");
+} else {
+  console.log("Questa parola NON è palindroma");
 }
 
 
@@ -34,15 +23,18 @@ function checkPalindrome(str) {
 // Dichiariamo chi ha vinto.
 
 // prompt pari o dispari
-const pariDispari = prompt('Inserisci pari o dispari'); 
-const oneToFive = prompt('inserisci un numero da 1 a 5');
+// const pariDispari = prompt('Inserisci pari o dispari'); 
+// const oneToFive = prompt('inserisci un numero da 1 a 5');
 
-console.log(pariDispari);
-console.log(oneToFive);
+// console.log(pariDispari);
+// console.log(oneToFive);
 
-function casuale() {
-   num = Math.round(Math.random() * 5);
-   document.getElementById("casuale").innerHTML ="Numero casuale " + num;
-}
+// casuale();
 
-console.log(casuale);
+// function casuale() {
+
+//    num = Math.round(Math.random() * 5);
+//    console.log("Numero casuale " + num); 
+
+// }
+
