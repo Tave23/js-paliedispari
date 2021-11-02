@@ -5,14 +5,34 @@
 
 
 //prompt della parola richiesta dall'utente
-const str = prompt('inserisci una parola per vedere se è palindroma o meno')
-let strReverse = str.split("").reverse().join("");
+const parolaUtente = prompt('inserisci una parola per vedere se è palindroma o meno');
 
-if (str === strReverse) {
-  console.log("Questa parola è palindroma");
+checkParolaPalindroma(parolaUtente);
+
+if (checkParolaPalindroma(parolaUtente)) {
+   console.log('La parola scelta è palindroma');
 } else {
-  console.log("Questa parola NON è palindroma");
+   console.log('La parola scelta NON è palindroma');
 }
+
+
+function checkParolaPalindroma (parolaUtente) {
+   // ribalta la parola
+   let parolaRibaltata = '';
+   for(let i = parolaUtente.length - 1; i >= 0; i--){
+      parolaRibaltata += parolaUtente[i];
+      console.log(parolaRibaltata);
+   }
+   // check se uguale alla partenza
+
+   if(parolaRibaltata.toUpperCase() === parolaUtente.toUpperCase())  return true;
+   return false;
+   
+
+}
+   // risultato palindroma/non palindroma
+
+
 
 
 // Pari e Dispari
